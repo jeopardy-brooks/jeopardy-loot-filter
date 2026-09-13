@@ -10,7 +10,12 @@ Personal RuneLite Loot Filters project, based on the Rikten-derived filter selec
 - `baseline/riktenx-jeopardy-value-sort.rs2f`: exact starting copy for comparison and recovery.
 - `PROVENANCE.md`: source and verification details.
 
-The initial working filter changes only the display name. It preserves all existing modules, item lists, colors, GE-value pickup-menu priority tiers, and the Superior dragon bones visibility/color exceptions. RuneLite profile settings (including separate hidden/highlighted lists) are not included in this filter.
+The filter preserves the baseline GE-value pickup-menu priority tiers and Superior dragon bones exceptions. Customizations:
+
+- **Tormented demon:** Guthixian temple teleports are visible below the minimum-value cutoff, with a configurable blue style. This rule also applies outside the temple and takes precedence over the TD hide list; existing ownership restrictions still apply.
+- **Food and potions:** an editable cooked-fish list highlights unnoted shark, monkfish, manta ray, marlin, anglerfish, cooked karambwan, sea turtle, swordfish, tuna, bass, and salmon in green, below the value cutoff. Existing explicit area hide rules retain priority. Raw and noted fish keep their existing behavior. Potion styles are unchanged.
+
+ RuneLite profile settings (including separate hidden/highlighted lists) are not included in this filter.
 
 ## Import and customize
 

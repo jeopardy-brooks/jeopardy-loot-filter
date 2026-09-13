@@ -1322,6 +1322,20 @@ CONST_DEMONICGORILLA_RULE (name:VAR_DEMONICGORILLA_ENUMLIST_FILTER_OTHER) {
 }
 
 
+/*@ define:input:slayer
+type: style
+group: Tormented demon
+label: Guthixian temple teleport
+*/
+#define VAR_TORMENTEDDEMON_TELEPORTSTYLE textColor = "#66b2ff";menuTextColor = "#66b2ff";textAccent = 2;
+
+/* Always visible, including below the value cutoff and in the TD hide list. */
+rule (name:"Guthixian temple teleport") {
+  VAR_TORMENTEDDEMON_TELEPORTSTYLE
+  hidden = false;
+  hideOverlay = false;
+}
+
 /*@ define:input
 type: style
 group: Tormented demon 
@@ -5331,8 +5345,25 @@ rule (name:VAR_UNIQUE_CTIER) { VAR_UNIQUE_CTIER_CUSTOMSTYLE }
 
 /*@ define:module:potions
 ---
-name: Potions
+name: Food and potions
 */
+
+/*@ define:input:potions
+type: stringlist
+group: Food
+label: Cooked fish to highlight
+*/
+#define VAR_FOOD_FISH_ITEMS ["Shark","Monkfish","Manta ray","Marlin","Anglerfish","Cooked karambwan","Sea turtle","Swordfish","Tuna","Bass","Salmon"]
+
+/*@ define:input:potions
+type: style
+group: Food
+label: Cooked fish highlight
+*/
+#define VAR_FOOD_FISH_USERSTYLE hidden = false;hideOverlay = false;textColor = "#00ff00";menuTextColor = "#00ff00";textAccent = 2;
+
+/* Ready-to-eat ground food; raw and noted fish retain existing filtering. */
+rule (name:VAR_FOOD_FISH_ITEMS && noted:false) { VAR_FOOD_FISH_USERSTYLE }
 
 #define CONST_POTION_HIGHLIGHT(_name, _userstyle)   rule (name:_name && noted:false) {    _userstyle  }
 
