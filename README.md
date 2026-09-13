@@ -2,6 +2,8 @@
 
 Personal RuneLite Loot Filters project, based on the Rikten-derived filter selected in the saved Jeopardy profile.
 
+[GitHub repository](https://github.com/jeopardy-brooks/jeopardy-loot-filter) · [Raw filter URL for import](https://raw.githubusercontent.com/jeopardy-brooks/jeopardy-loot-filter/main/filter.rs2f)
+
 ## Files
 
 - `filter.rs2f`: working custom filter; displayed as **Jeopardy Custom Loot Filter**.
@@ -12,7 +14,7 @@ The initial working filter changes only the display name. It preserves all exist
 
 ## Import and customize
 
-1. Once this repository is published on GitHub, open `filter.rs2f` and select **Raw**. Copy that URL.
+1. Copy the **Raw filter URL for import** linked above.
 2. Open [Loot Filters UI](https://loot-filters.kaqemeex.net), choose the filter import action, and import from that URL.
 3. Select **Jeopardy Custom Loot Filter** and adjust its modules.
 4. Export the configured filter using the site's export controls. Import/select it in RuneLite Loot Filters on the Jeopardy profile. If placing a file in the plugin's filters directory manually, reload filters from disk before selecting it.
@@ -30,4 +32,4 @@ Reference: [Modular Filters book](https://github.com/Kaqemeex/loot-filters-ui/tr
 
 ## Status
 
-Local starter prepared. GitHub publication, editor import, and in-game activation have not yet been verified. The original installed filter and RuneLite profile have not been modified.
+Starter published to GitHub. Editor import and in-game activation have not yet been verified. The original installed filter and RuneLite profile have not been modified.
