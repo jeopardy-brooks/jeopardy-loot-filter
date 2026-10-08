@@ -12,6 +12,8 @@ Personal RuneLite Loot Filters project, based on the Rikten-derived filter selec
 
 The filter preserves the baseline GE-value pickup-menu priority tiers and Superior dragon bones exceptions. Customizations:
 
+- **Crystal shards:** always-visible pale teal labels and menu text (`#95B9BB`), sampled from the shard icon. Existing ownership restrictions still apply.
+
 - **Tormented demon:** Guthixian temple teleports are visible below the minimum-value cutoff, with a configurable blue style. This rule also applies outside the temple and takes precedence over the TD hide list; existing ownership restrictions still apply.
 - **Food and potions:** an editable cooked-fish list highlights unnoted shark, monkfish, manta ray, marlin, anglerfish, cooked karambwan, sea turtle, swordfish, tuna, bass, and salmon in green, below the value cutoff. Existing explicit area hide rules retain priority. Raw and noted fish keep their existing behavior. Potion styles are unchanged.
 

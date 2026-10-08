@@ -95,6 +95,20 @@ apply (name:"Superior dragon bones") {
 
 
 
+/*@ define:input:general
+type: style
+group: Crystal shards
+label: Crystal shard highlight
+*/
+#define VAR_CRYSTAL_SHARD_STYLE textColor = "#95b9bb";menuTextColor = "#95b9bb";textAccent = 2;
+
+/* Match the shard icon; keep shards visible before area/value hide rules. */
+rule (name:"Crystal shard") {
+  VAR_CRYSTAL_SHARD_STYLE
+  hidden = false;
+  hideOverlay = false;
+}
+
 /*@ define:input
 type: stringlist
 label: Custom group 1
