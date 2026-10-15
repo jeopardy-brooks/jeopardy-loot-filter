@@ -107,8 +107,8 @@ label: Crystal shard highlight
 rule (id:[5070, 5071, 5072]) {
   hidden = false;
   hideOverlay = false;
-  textColor = "#ffff00";
-  menuTextColor = "#ffff00";
+  textColor = "#ff00ff";
+  menuTextColor = "#ff00ff";
   textAccent = 2;
 }
 
