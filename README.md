@@ -12,6 +12,7 @@ Personal RuneLite Loot Filters project, based on the Rikten-derived filter selec
 
 The filter preserves the baseline GE-value pickup-menu priority tiers and Superior dragon bones exceptions. Customizations:
 
+- **Egg-filled bird nests:** red, green, and blue egg nests (IDs 5070–5072) always show yellow labels and menu text, with the overlay enabled, regardless of the minimum-value cutoff. Existing ownership restrictions still apply.
 - **Crystal shards:** always-visible pale teal labels and menu text (`#95B9BB`), sampled from the shard icon. Existing ownership restrictions still apply.
 
 - **Tormented demon:** Guthixian temple teleports are visible below the minimum-value cutoff, with a configurable blue style. This rule also applies outside the temple and takes precedence over the TD hide list; existing ownership restrictions still apply.
@@ -39,4 +40,4 @@ Reference: [Modular Filters book](https://github.com/Kaqemeex/loot-filters-ui/tr
 
 ## Status
 
-Starter published to GitHub. Editor import and in-game activation have not yet been verified. The original installed filter and RuneLite profile have not been modified.
+Synced from the installed custom filter on 2026-10-14, excluding generated editor source metadata. The saved Jeopardy profile selects this custom filter; live reload and in-game rendering have not been verified.

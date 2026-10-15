@@ -6,6 +6,7 @@ meta { name = "Jeopardy Custom Loot Filter"; }
 
 
 
+
 /*@ define:module:general
 name: General options
 */
@@ -101,6 +102,15 @@ group: Crystal shards
 label: Crystal shard highlight
 */
 #define VAR_CRYSTAL_SHARD_STYLE textColor = "#95b9bb";menuTextColor = "#95b9bb";textAccent = 2;
+
+/* Always highlight red, green, and blue egg-filled bird nests. */
+rule (id:[5070, 5071, 5072]) {
+  hidden = false;
+  hideOverlay = false;
+  textColor = "#ffff00";
+  menuTextColor = "#ffff00";
+  textAccent = 2;
+}
 
 /* Match the shard icon; keep shards visible before area/value hide rules. */
 rule (name:"Crystal shard") {
@@ -199,6 +209,7 @@ rule (name:VAR_HHGROUP_STRINGLIST_HIGHLIGHT3_ITEMS) { VAR_HHGROUP_STYLE_HIGHLIGH
 rule (name:VAR_HHGROUP_STRINGLIST_HIGHLIGHT4_ITEMS) { VAR_HHGROUP_STYLE_HIGHLIGHT4_STYLE }
 rule (name:VAR_GENERAL_ITEMS5) { VAR_GENERAL_STYLE5 }
 rule (name:VAR_GENERAL_ITEMS6) { VAR_GENERAL_STYLE6 }
+
 
 
 
@@ -380,6 +391,7 @@ label: Hide these items
 */
 #define VAR_HIDES_HIDEBYDEFAULT ["Vial","Bucket","Jug","Beer glass","Vial of water","Bucket of water","Jug of water","Bones","Big bones","Ashes","Seaweed","Broken arrow","Empty plant pot","Weeds"]
 apply (name:VAR_HIDES_HIDEBYDEFAULT) { hidden = true; }
+
 
 
 
@@ -1537,6 +1549,7 @@ enum: ["Dagannoth ribs","Ensouled dagannoth head","Brimstone key"]
 CONST_DAGANNOTH_RULE (name:VAR_DAGANNOTH_ENUMLIST_FILTER_TERTIARY) {
   hidden = true;
 }
+
 
 
 
@@ -4865,6 +4878,7 @@ CONST_BRUTUS_RULE (name:VAR_BRUTUS_ENUMLIST_FILTER_TERTIARY) {
 
 
 
+
 /*@ define:module:cox
 ---
 name: CoX
@@ -4910,6 +4924,7 @@ rule (name:"revitalisation*") {
 rule (name:"xeric's aid*") {
   VAR_COX_XER_USERSTYLE
 }
+
 
 
 
@@ -4975,6 +4990,7 @@ rule (name:"smelling salts*") { VAR_TOA_SMS_STYLE }
 rule (name:"silk dressing*") { VAR_TOA_SLD_STYLE }
 rule (name:"blessed crystal scarab*") { VAR_TOA_BCS_STYLE }
 rule (name:"honey locust*") { VAR_TOA_HNL_STYLE }
+
 
 
 
@@ -5239,6 +5255,7 @@ rule (name:"Urium remains") { VAR_SOM_URIUM_STYLE }
 
 
 
+
 /*@ define:module:defender
 name: Defenders
 */
@@ -5262,6 +5279,7 @@ exampleItemId: 12954
 #define VAR_DEFENDER_EQUIP_DEFENDER_STYLE backgroundColor = "#80000000";showLootbeam = true;sound = 6765;icon = CurrentItem();
 
 rule (name:VAR_DEFENDER_EQUIP_DEFENDER_LIST) { hidden = false; VAR_DEFENDER_EQUIP_DEFENDER_STYLE }
+
 
 
 
@@ -5357,6 +5375,7 @@ rule (name:VAR_UNIQUE_CTIER) { VAR_UNIQUE_CTIER_CUSTOMSTYLE }
 
 
 
+
 /*@ define:module:potions
 ---
 name: Food and potions
@@ -5374,7 +5393,7 @@ type: style
 group: Food
 label: Cooked fish highlight
 */
-#define VAR_FOOD_FISH_USERSTYLE hidden = false;hideOverlay = false;textColor = "#00ff00";menuTextColor = "#00ff00";textAccent = 2;
+#define VAR_FOOD_FISH_USERSTYLE hidden = false;textColor = "#00ff00";menuTextColor = "#00ff00";textAccent = 2;
 
 /* Ready-to-eat ground food; raw and noted fish retain existing filtering. */
 rule (name:VAR_FOOD_FISH_ITEMS && noted:false) { VAR_FOOD_FISH_USERSTYLE }
@@ -5430,6 +5449,7 @@ CONST_POTION_HIGHLIGHT("sanfew serum*",         VAR_POTION_SANFEW_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*super combat potion*", VAR_POTION_SUPERCOMBAT_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*ranging potion*",      VAR_POTION_RANGE_USERSTYLE)
 CONST_POTION_HIGHLIGHT("*bastion potion*",      VAR_POTION_BASTION_USERSTYLE)
+
 
 
 
@@ -5507,6 +5527,7 @@ rule (name:["scroll box (master)", "clue scroll (master)", "reward casket (maste
 
 
 
+
 /*@ define:module:currency_/_tokens
 ---
 name: Currency / Tokens
@@ -5527,6 +5548,7 @@ exampleItemId: 11849
 #define VAR_CURRENCY_USERSTYLE textColor = "#beb287";icon = CurrentItem();
 
 apply (name:VAR_CURRENCY_ITEMS) { VAR_CURRENCY_USERSTYLE }
+
 
 
 
